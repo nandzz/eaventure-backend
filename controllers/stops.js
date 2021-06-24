@@ -74,11 +74,13 @@ function build(data) {
             return train_date > now_date
         })
 
-
-        if (index_of_next_station != null) {
+        if (index_of_next_station != undefined) {
             return index_of_next_station.Sequenza
         }
-        return _json[0].Sequenza
+        if (_json.Righe[0]) {
+          return _json.Righe[0].Sequenza
+        } 
+        return null
     }()
 
     let new_json = function formatNewJson() {
