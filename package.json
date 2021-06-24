@@ -1,0 +1,21 @@
+{
+  "name": "eaventure-app-backend",
+  "version": "1.0.0",
+  "description": "Eaventure-backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ragazzi from Cisco",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^8.6.8",
+    "node-fetch": "^2.6.1",
+    "nodejs": "0.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
