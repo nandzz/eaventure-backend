@@ -3,8 +3,8 @@ const router = express.Router()
 
 const { getRoutesEAV } = require('./controllers/stops.js')
 
-router.get('/stops', async function (req, res) {
-     await getRoutesEAV("ETR001")
+router.get('/stops', function (req, res) {
+      getRoutesEAV("ETR001")
      .then((data) => {
          if (data  == null) {
             res.statusCode = 503

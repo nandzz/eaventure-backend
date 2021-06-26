@@ -1,5 +1,3 @@
-
-const firestore = require('firebase/firestore')
 const fetch = require('node-fetch')
 
 const stations = [
