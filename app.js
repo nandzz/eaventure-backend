@@ -18,6 +18,7 @@ firebase.initializeApp(config.firebaseConfig)
 
 app.use('/', routes)
 
+
 server = app.listen(config.local.port, function () {
     console.log("App Running")
     var host = server.address().address
