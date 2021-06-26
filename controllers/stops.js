@@ -41,11 +41,10 @@ const stations = [
     "SORRENTO",
 ]
 
-
-
 async function getData(id) {
         let dateNow = new Date()
-        let key = (dateNow.getFullYear() + dateNow.getMonth() + dateNow.getDate()) / 2
+        let key = Math.round((dateNow.getFullYear() + dateNow.getMonth() + dateNow.getDate()) / 2)
+        console.log(key)
         const response = await fetch(`https://statocorsa.eavsrl.it/Etr/${id}/${key}`, {
             method: 'GET',
             mode: 'cors',
