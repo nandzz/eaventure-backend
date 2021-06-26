@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser')
 const config = require('./config')
 const { Router } = require('express');
 const cors = require('cors')
+const process = require('process')
 
 const app = express()
 const routes = require('./routes.js')
@@ -26,3 +27,5 @@ server = app.listen(config.local.port, function () {
     console.log(`Host ${host}`)
     console.log(`Port ${port}`)
 })
+
+console.log(process._getActiveHandles())
