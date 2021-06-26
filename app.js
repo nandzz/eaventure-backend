@@ -10,6 +10,7 @@ const config = require('./config')
 const { Router } = require('express');
 const cors = require('cors')
 
+console.log(process.getuid())
 
 const app = express()
 const routes = require('./routes.js')
