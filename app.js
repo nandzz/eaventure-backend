@@ -10,8 +10,6 @@ const config = require('./config')
 const { Router } = require('express');
 const cors = require('cors')
 
-console.log(process.getuid())
-
 const app = express()
 const routes = require('./routes.js')
 
@@ -21,8 +19,7 @@ app.use(cors())
 
 app.use('/', routes)
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), function () {
+app.listen(config.local.port, function () {
     console.log("App Running")
 })
 
