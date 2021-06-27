@@ -4,6 +4,7 @@ const express = require('express')
 var router = express.Router()
 
 router.get('/stops', function (req, res, next) {
+    console.log("Getting data")
      controller.getRoutesEAV("ETR001")
      .then((data) => {
          if (data  == null) {
