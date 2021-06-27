@@ -2,15 +2,18 @@
 const express = require('express')
 const http = require('http')
 const path = require('path')
-
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const config = require('./config')
+const debug = require('debug')('app4')
 
 const { Router } = require('express');
 const cors = require('cors')
 
-const app = express()
+
+var   app = express()
+      env = app.settings.env
+
 const routes = require('./routes.js')
 
 app.use(bodyParser.json())
@@ -19,8 +22,7 @@ app.use(cors())
 
 app.use('/', routes)
 
-app.listen(config.local.port, function () {
-    console.log("App Running")
-})
-
+http.createServer(app).listen(3000, function(){
+    console.log("Listening")
+});
 
