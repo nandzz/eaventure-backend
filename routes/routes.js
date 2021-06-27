@@ -1,10 +1,12 @@
-const express = require('express')
-const router = express.Router()
+import controller from '../controllers/stops.js'
 
-const { getRoutesEAV } = require('./controllers/stops.js')
 
-router.get('/stops', function (req, res) {
-      getRoutesEAV("ETR001")
+import express from 'express'
+var router = express.Router()
+
+
+router.get('/stops', function (req, res, next) {
+     controller.getRoutesEAV("ETR001")
      .then((data) => {
          if (data  == null) {
             res.statusCode = 503
@@ -19,4 +21,4 @@ router.get('/stops', function (req, res) {
      })
 })
 
-module.exports = router
+export default router
