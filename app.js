@@ -8,7 +8,12 @@ const routes = require('./routes/routes.js')
 
 var app = express();
 
-app.use(cors())
+app.use(cors({
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
+  origin: '*'
+
+
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
