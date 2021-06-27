@@ -1,11 +1,10 @@
-import path from 'path'
-// require('dotenv').config({path: path.resolve(__dirname+'/.env')});
-import createError from 'http-errors'
-import express from 'express'
-import cookieParser from 'cookie-parser'
-import logger  from 'morgan'
-import routes from './routes/routes.js'
-import cors from 'cors'
+const path = require('path')
+const createError = require('http-errors')
+const express = require('express')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
+const routes = require('./routes/routes.js')
+const cors = require('cors')
 
 var app = express();
 
@@ -35,4 +34,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-export default app 
+module.exports = app

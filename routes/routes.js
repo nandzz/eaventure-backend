@@ -1,9 +1,7 @@
-import controller from '../controllers/stops.js'
+const controller = require('../controllers/stops')
+const express = require('express')
 
-
-import express from 'express'
 var router = express.Router()
-
 
 router.get('/stops', function (req, res, next) {
      controller.getRoutesEAV("ETR001")
@@ -21,4 +19,4 @@ router.get('/stops', function (req, res, next) {
      })
 })
 
-export default router
+module.exports = router

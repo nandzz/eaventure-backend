@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch') 
 
 const stations = [
     "NAPOLI PORTA NOLANA",
@@ -105,7 +105,7 @@ function build(data) {
     return new_json
 }
 
-const controller = {
+ controller = {
     getRoutesEAV: async (id) => {
             let EAV_response = await getData()
             let json = await EAV_response.json()
@@ -114,4 +114,4 @@ const controller = {
     },
 }
 
-export default controller
+module.exports = controller
