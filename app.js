@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 var corsOptions = {
-  origin: '*',
+  origin: 'https://eaventure.live',
   optionsSuccessStatus: 200,
 }
 
