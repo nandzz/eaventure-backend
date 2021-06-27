@@ -5,7 +5,7 @@ module.exports = {
           script: "./bin/www",
           instances: 1,
           ignore_watch: ["logs"],
-          autorestart: false,
+          autorestart: true,
           max_memory_restart: '1G',
           watch: true,
           ignore_watch: [".git/index.lock", "logs", "public", "node_modules", "[\\/\\\\]\\./","pids", ".git", ".idea"],
