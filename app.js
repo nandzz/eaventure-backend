@@ -6,6 +6,7 @@ const logger = require('morgan')
 const routes = require('./routes/routes.js')
 const cors = require('cors')
 
+
 var app = express();
 
 
@@ -14,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 var corsOptions = {
-  origin: 'https://eaventure.live',
+  origin: '*',
   optionsSuccessStatus: 200,
 }
 
