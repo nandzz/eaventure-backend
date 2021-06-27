@@ -11,7 +11,7 @@ module.exports = {
           ignore_watch: [".git/index.lock", "logs", "public", "node_modules", "[\\/\\\\]\\./","pids", ".git", ".idea"],
           env: {
               "PORT": 3000,
-              "NODE_ENV": "production"
+              "NODE_ENV": "development"
           }
         }
     ]
