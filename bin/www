@@ -6,8 +6,11 @@
 
 const app = require('../app.js')
 const http = require('http')
+const cors = require('cors')
 const debug = require("debug")("server");
 
+
+app.use(cors())
 /**
  * Get port from environment and store in Express.
  */
