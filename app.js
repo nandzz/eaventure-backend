@@ -10,7 +10,7 @@ var app = express();
 
 app.use(cors({
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
-  origin: 'https://eaventure.live'
+  origin: ['https://eaventure.live']
 }))
 
 app.use(logger('dev'));
