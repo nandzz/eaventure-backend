@@ -5,8 +5,16 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const routes = require('./routes/routes.js')
+const { Console } = require('console')
+require('dotenv').config();
+
+const database = require('./connections.js')
 
 var app = express();
+
+database.mongo.connect()
+.then((success) => console.log(success))
+.catch((error) => console.log(error))
 
 app.use(cors({
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
@@ -19,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', routes);
-// app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
