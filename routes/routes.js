@@ -5,7 +5,7 @@ var router = express.Router()
 
 router.get('/stops', function (req, res, next) {
     console.log("Getting data")
-     controller.getRoutesEAV("225")
+     controller.getRoutesEAV("224")
      .then((data) => {
          if (data  == null) {
             res.statusCode = 503
