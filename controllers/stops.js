@@ -9,7 +9,7 @@ async function getData(id) {
         let key = Math.round((dateNow.getFullYear() + dateNow.getMonth() + dateNow.getDate()) / 2)
         const response = await fetch(`https://statocorsa.eavsrl.it/Etr/${id}/${key}`, {
             method: 'GET',
-            mode: 'cors',
+            mode: 'cors',  
             cache: 'no-cache',
             headers: {
                 'Content-Type': 'application/json'
