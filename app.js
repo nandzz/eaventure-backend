@@ -18,7 +18,7 @@ database.mongo.connect()
 
 app.use(cors({
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
-  origin: ['https://eaventure.live']
+  origin: ['https://eaventure.live', 'http://localhost:2700']
 }))
 
 app.use(logger('dev'));
