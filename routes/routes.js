@@ -4,9 +4,10 @@ const media = require('../controllers/media')
 const express = require('express')
 var router = express.Router()
 
-router.get('/stops', function (req, res, next) {
-    console.log("Getting data")
-     controller.getRoutesEAV("225")
+router.get('/stops/:id', function (req, res, next) {
+     const id = req.params.id
+     console.log(id)
+     controller.getRoutesEAV(id)
      .then((data) => {
          if (data  == null) {
             res.statusCode = 503
@@ -20,7 +21,6 @@ router.get('/stops', function (req, res, next) {
          console.log(error)
      })
 })
-
 
 router.get('/media', function (req, res, next) {
     console.log("Getting Media")
